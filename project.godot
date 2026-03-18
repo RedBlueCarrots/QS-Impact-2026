@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="QS-Impact-2026"
+run/main_scene="uid://dpmn0kcy0qd2h"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
