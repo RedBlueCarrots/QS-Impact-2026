@@ -4,14 +4,14 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5syg"]
 
-[node name="Wheat" type="Area2D" unique_id=1632852994]
+[node name="Wheat" type="Area2D" unique_id=1632852994 groups=["wheat"]]
 scale = Vector2(3, 3)
 script = ExtResource("1_uyi0h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831463110]
 shape = SubResource("RectangleShape2D_g5syg")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1720546231]
+[node name="Node2D" type="Node2D" parent="." unique_id=1720546231 groups=["wheat"]]
 
 [node name="ColorRect2" type="ColorRect" parent="Node2D" unique_id=1125901166]
 offset_left = -8.0

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bo3ov7syws3os"]
 
+[ext_resource type="Script" uid="uid://caimk604rtqfb" path="res://Farming_scripts/farming_main.gd" id="1_5bv6k"]
 [ext_resource type="Script" uid="uid://dxccmw5ffn2s1" path="res://Farming_scripts/camera_2d.gd" id="1_8rb8q"]
 [ext_resource type="PackedScene" uid="uid://dm7a3luiw3lcr" path="res://Farming assets/cow.tscn" id="2_ubwkw"]
 [ext_resource type="PackedScene" uid="uid://ccb6hjgc5i6xg" path="res://Farming assets/Wheat.tscn" id="3_xyv3g"]
@@ -7,6 +8,7 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ubwkw"]
 
 [node name="Farm_level" type="Node2D" unique_id=1218766201]
+script = ExtResource("1_5bv6k")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1732727681]
 position = Vector2(-10, 57)
@@ -30,14 +32,17 @@ limit_left = 0
 limit_right = 1152
 script = ExtResource("1_8rb8q")
 
-[node name="cow" parent="." unique_id=971544233 instance=ExtResource("2_ubwkw")]
-position = Vector2(1008, 225)
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D" unique_id=507958035]
+offset_left = -288.0
+offset_top = -161.0
+offset_right = 288.0
+offset_bottom = -121.0
+size_flags_horizontal = 6
 
-[node name="cow2" parent="." unique_id=235620778 instance=ExtResource("2_ubwkw")]
-position = Vector2(993, 177)
-
-[node name="cow3" parent="." unique_id=1934948005 instance=ExtResource("2_ubwkw")]
-position = Vector2(1075, 231)
+[node name="Label" type="Label" parent="Camera2D/HBoxContainer" unique_id=1255011258]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "120"
 
 [node name="Wheat" parent="." unique_id=1632852994 instance=ExtResource("3_xyv3g")]
 position = Vector2(787, 265)
@@ -59,3 +64,22 @@ position = Vector2(495, 266)
 
 [node name="Wheat2" parent="." unique_id=905709097 instance=ExtResource("3_xyv3g")]
 position = Vector2(846, 264)
+
+[node name="cow" parent="." unique_id=971544233 instance=ExtResource("2_ubwkw")]
+position = Vector2(1008, 225)
+
+[node name="cow2" parent="." unique_id=235620778 instance=ExtResource("2_ubwkw")]
+position = Vector2(993, 177)
+
+[node name="cow3" parent="." unique_id=1934948005 instance=ExtResource("2_ubwkw")]
+position = Vector2(1075, 231)
+
+[node name="Timer" type="Timer" parent="." unique_id=1133952615]
+wait_time = 120.0
+autostart = true
+
+[node name="Update" type="Timer" parent="." unique_id=176542490]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Update" to="." method="_on_update_timeout"]

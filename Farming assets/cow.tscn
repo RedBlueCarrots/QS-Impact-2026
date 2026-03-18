@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://celhne7tjcxav" path="res://Farming assets/cow.gd" id="1_hlgba"]
 [ext_resource type="Script" uid="uid://csgdjkmqe0mwo" path="res://Farming assets/cow_pickup.gd" id="2_dkfmk"]
+[ext_resource type="Script" uid="uid://oy1sangji4tc" path="res://Farming_scripts/eating.gd" id="3_3sqf6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yrtgg"]
 size = Vector2(40, 20)
 
-[node name="cow" type="RigidBody2D" unique_id=971544233]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tf6fn"]
+size = Vector2(89, 41)
+
+[node name="cow" type="RigidBody2D" unique_id=971544233 groups=["cows"]]
 collision_layer = 2
 input_pickable = true
 mass = 300.0
@@ -72,4 +76,16 @@ offset_bottom = 11.0
 mouse_filter = 2
 color = Color(0.6509804, 0.33333334, 0, 1)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=324284607]
+[node name="Area2D" type="Area2D" parent="." unique_id=1584717251]
+collision_mask = 5
+script = ExtResource("3_3sqf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1797961709]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_tf6fn")
+
+[node name="Timer" type="Timer" parent="." unique_id=933189185]
+autostart = true
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="Area2D" method="_on_timer_timeout"]

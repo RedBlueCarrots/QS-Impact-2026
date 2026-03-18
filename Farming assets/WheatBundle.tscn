@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yudxo"]
 size = Vector2(20, 8)
 
-[node name="BundleOWhet" type="RigidBody2D" unique_id=5165682]
+[node name="BundleOWhet" type="RigidBody2D" unique_id=5165682 groups=["wheat"]]
 collision_layer = 4
 collision_mask = 5
 
