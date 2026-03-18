@@ -1,5 +1,6 @@
 extends Area2D
 
+var whet = preload("res://Farming assets/WheatBundle.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,4 +14,7 @@ func _process(delta: float) -> void:
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("select"):
+		var instance = whet.instantiate()
+		instance.position = position
+		get_tree().root.add_child(instance)
 		print("weheat!")

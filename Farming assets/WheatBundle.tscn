@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d1a41d2wfm0c6"]
+
+[ext_resource type="Script" uid="uid://csgdjkmqe0mwo" path="res://Farming assets/cow_pickup.gd" id="1_3tfg3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yudxo"]
+size = Vector2(20, 8)
+
+[node name="BundleOWhet" type="RigidBody2D" unique_id=5165682]
+collision_layer = 4
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24841233]
+shape = SubResource("RectangleShape2D_yudxo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1132776450]
+offset_left = -10.0
+offset_top = -4.0
+offset_right = 10.0
+offset_bottom = 4.0
+color = Color(1, 1, 0.16862746, 1)
+script = ExtResource("1_3tfg3")
+
+[node name="Label" type="Label" parent="." unique_id=459362675]
+offset_left = -11.0
+offset_top = -6.0
+offset_right = 12.0
+offset_bottom = 6.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+text = "WHET"

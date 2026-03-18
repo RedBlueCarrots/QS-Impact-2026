@@ -9,6 +9,7 @@ size = Vector2(40, 20)
 [node name="cow" type="RigidBody2D" unique_id=971544233]
 collision_layer = 2
 input_pickable = true
+mass = 300.0
 freeze_mode = 1
 script = ExtResource("1_hlgba")
 
