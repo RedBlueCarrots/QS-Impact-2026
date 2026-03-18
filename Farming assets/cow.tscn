@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dm7a3luiw3lcr"]
+
+[ext_resource type="Script" uid="uid://celhne7tjcxav" path="res://Farming assets/cow.gd" id="1_hlgba"]
+[ext_resource type="Script" uid="uid://csgdjkmqe0mwo" path="res://Farming assets/cow_pickup.gd" id="2_dkfmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yrtgg"]
+size = Vector2(40, 20)
+
+[node name="cow" type="RigidBody2D" unique_id=971544233]
+collision_layer = 2
+input_pickable = true
+freeze_mode = 1
+script = ExtResource("1_hlgba")
+
+[node name="Control" type="Control" parent="." unique_id=292036387]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -21.0
+offset_top = -10.0
+offset_right = 19.0
+offset_bottom = 10.0
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 13
+script = ExtResource("2_dkfmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1192701677]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_yrtgg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1324366755]
+offset_left = -21.0
+offset_top = -10.0
+offset_right = 19.0
+offset_bottom = 32.590607
+scale = Vector2(1, 0.4695871)
+mouse_filter = 2
+mouse_behavior_recursive = 2
+mouse_default_cursor_shape = 13
+color = Color(0.6509804, 0.33333334, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1696825293]
+offset_left = -21.0
+offset_top = -12.0
+offset_right = 19.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "COW"
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1242080076]
+offset_left = 12.0
+offset_top = -18.0
+offset_right = 24.0
+offset_bottom = -7.0
+mouse_filter = 2
+color = Color(0.6509804, 0.33333334, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2" unique_id=1866432354]
+layout_mode = 0
+offset_left = -33.0
+offset_top = 28.0
+offset_right = -21.0
+offset_bottom = 39.0
+mouse_filter = 2
+color = Color(0.6509804, 0.33333334, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/ColorRect2" unique_id=1646042036]
+layout_mode = 0
+offset_left = 28.0
+offset_right = 40.0
+offset_bottom = 11.0
+mouse_filter = 2
+color = Color(0.6509804, 0.33333334, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=324284607]

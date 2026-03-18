@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://ccb6hjgc5i6xg"]
+
+[ext_resource type="Script" uid="uid://do8686fqvy36i" path="res://Farming_scripts/wheat.gd" id="1_uyi0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5syg"]
+
+[node name="Wheat" type="Area2D" unique_id=1632852994]
+scale = Vector2(3, 3)
+script = ExtResource("1_uyi0h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=831463110]
+shape = SubResource("RectangleShape2D_g5syg")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1720546231]
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D" unique_id=1125901166]
+offset_left = -8.0
+offset_top = -7.0
+offset_right = -7.0
+offset_bottom = 10.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="Node2D" unique_id=944102785]
+offset_left = -6.0
+offset_top = -8.0
+offset_right = -5.0
+offset_bottom = 9.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="Node2D" unique_id=1164064757]
+offset_left = -4.0
+offset_top = -9.0
+offset_right = -3.0
+offset_bottom = 8.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="Node2D" unique_id=1679793888]
+offset_left = -2.0
+offset_top = -9.0
+offset_right = -1.0
+offset_bottom = 8.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="Node2D" unique_id=2061898188]
+offset_top = -7.0
+offset_right = 1.0
+offset_bottom = 10.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="Node2D" unique_id=1287149770]
+offset_left = 2.0
+offset_top = -8.0
+offset_right = 3.0
+offset_bottom = 9.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="Node2D" unique_id=1030071141]
+offset_left = 4.0
+offset_top = -9.0
+offset_right = 5.0
+offset_bottom = 8.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="Node2D" unique_id=113830255]
+offset_left = 6.0
+offset_top = -8.0
+offset_right = 7.0
+offset_bottom = 9.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect10" type="ColorRect" parent="Node2D" unique_id=25036560]
+offset_left = 8.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = 9.0
+mouse_filter = 2
+color = Color(1, 1, 0.31764707, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=885115912]
+offset_left = -10.0
+offset_top = 7.0
+offset_right = 10.0
+offset_bottom = 10.0
+mouse_filter = 2
+color = Color(0.24568173, 0.12929991, 0.025924547, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

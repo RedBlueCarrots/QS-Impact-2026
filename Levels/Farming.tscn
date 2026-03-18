@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://bo3ov7syws3os"]
+
+[ext_resource type="Script" uid="uid://dxccmw5ffn2s1" path="res://Farming_scripts/camera_2d.gd" id="1_8rb8q"]
+[ext_resource type="PackedScene" uid="uid://dm7a3luiw3lcr" path="res://Farming assets/cow.tscn" id="2_ubwkw"]
+[ext_resource type="PackedScene" uid="uid://ccb6hjgc5i6xg" path="res://Farming assets/Wheat.tscn" id="3_xyv3g"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ubwkw"]
+
+[node name="Farm_level" type="Node2D" unique_id=1218766201]
+
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1732727681]
+position = Vector2(-10, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1317725405]
+position = Vector2(598, 228)
+shape = SubResource("WorldBoundaryShape2D_ubwkw")
+
+[node name="ColorRect" type="ColorRect" parent="Floor" unique_id=866188022]
+offset_left = 10.0
+offset_top = 229.0
+offset_right = 50.055634
+offset_bottom = 269.0
+scale = Vector2(28.76, 1)
+color = Color(0.5795089, 0.9999998, 0.45646107, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1716932246]
+position = Vector2(288, 164)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_right = 1152
+script = ExtResource("1_8rb8q")
+
+[node name="cow" parent="." unique_id=971544233 instance=ExtResource("2_ubwkw")]
+position = Vector2(1008, 225)
+
+[node name="cow2" parent="." unique_id=235620778 instance=ExtResource("2_ubwkw")]
+position = Vector2(993, 177)
+
+[node name="cow3" parent="." unique_id=1934948005 instance=ExtResource("2_ubwkw")]
+position = Vector2(1075, 231)
+
+[node name="Wheat" parent="." unique_id=1632852994 instance=ExtResource("3_xyv3g")]
+position = Vector2(787, 265)
+
+[node name="Wheat3" parent="." unique_id=1277456810 instance=ExtResource("3_xyv3g")]
+position = Vector2(727, 265)
+
+[node name="Wheat4" parent="." unique_id=1703154276 instance=ExtResource("3_xyv3g")]
+position = Vector2(667, 266)
+
+[node name="Wheat5" parent="." unique_id=1717828181 instance=ExtResource("3_xyv3g")]
+position = Vector2(610, 266)
+
+[node name="Wheat6" parent="." unique_id=348121612 instance=ExtResource("3_xyv3g")]
+position = Vector2(553, 266)
+
+[node name="Wheat7" parent="." unique_id=1649598060 instance=ExtResource("3_xyv3g")]
+position = Vector2(495, 266)
+
+[node name="Wheat2" parent="." unique_id=905709097 instance=ExtResource("3_xyv3g")]
+position = Vector2(846, 264)
