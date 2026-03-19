@@ -13,9 +13,11 @@ func _process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	print("GAME OVER!")
+	print("score")
+	print(get_node("Truck").wheat)
 	print("cows left")
 	print(len(get_tree().get_nodes_in_group("cows")))
-	print("GAME OVER!")
 
 
 func _on_update_timeout() -> void:

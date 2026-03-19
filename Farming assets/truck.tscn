@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dn1awos3efdmo"]
+
+[ext_resource type="Script" uid="uid://d10q3knyhmq17" path="res://Farming_scripts/truck.gd" id="1_jp0mq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sy5m"]
+size = Vector2(40, 20)
+
+[node name="Truck" type="Area2D" unique_id=1118577027]
+scale = Vector2(3, 3)
+collision_mask = 5
+script = ExtResource("1_jp0mq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=165372509]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_5sy5m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1601759161]
+offset_left = -30.0
+offset_top = 7.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.26040253, 0.16172305, 0.08138647, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=988438487]
+offset_left = -30.0
+offset_top = -9.0
+offset_right = -27.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1288497638]
+offset_left = -24.0
+offset_top = -9.0
+offset_right = -21.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=130557900]
+offset_left = -18.0
+offset_top = -9.0
+offset_right = -15.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=174615180]
+offset_left = -12.0
+offset_top = -9.0
+offset_right = -9.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect6" type="ColorRect" parent="." unique_id=885260430]
+offset_left = -6.0
+offset_top = -9.0
+offset_right = -3.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect7" type="ColorRect" parent="." unique_id=1890039387]
+offset_top = -9.0
+offset_right = 3.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect8" type="ColorRect" parent="." unique_id=1007713269]
+offset_top = 7.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.6923091, 0.30966988, 0.23708603, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect9" type="ColorRect" parent="." unique_id=665908107]
+offset_left = -7.0
+offset_top = 10.0
+offset_right = -1.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect10" type="ColorRect" parent="." unique_id=1433653010]
+offset_left = -30.0
+offset_top = 10.0
+offset_right = -24.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

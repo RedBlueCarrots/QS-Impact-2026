@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dxccmw5ffn2s1" path="res://Farming_scripts/camera_2d.gd" id="1_8rb8q"]
 [ext_resource type="PackedScene" uid="uid://dm7a3luiw3lcr" path="res://Farming assets/cow.tscn" id="2_ubwkw"]
 [ext_resource type="PackedScene" uid="uid://ccb6hjgc5i6xg" path="res://Farming assets/Wheat.tscn" id="3_xyv3g"]
+[ext_resource type="PackedScene" uid="uid://dn1awos3efdmo" path="res://Farming assets/truck.tscn" id="5_pvkwl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ubwkw"]
 
@@ -80,6 +81,9 @@ autostart = true
 
 [node name="Update" type="Timer" parent="." unique_id=176542490]
 autostart = true
+
+[node name="Truck" parent="." unique_id=1118577027 instance=ExtResource("5_pvkwl")]
+position = Vector2(82, 244)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Update" to="." method="_on_update_timeout"]

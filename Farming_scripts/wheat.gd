@@ -17,6 +17,7 @@ func eat_wheat():
 	if remain < 1:
 			if remain == 0:
 				get_node("Node2D").queue_free()
+				remove_from_group("wheat")
 			return false
 	return true
 
@@ -28,3 +29,5 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		get_tree().root.add_child(instance)
 		if remain == 0:
 			get_node("Node2D").queue_free()
+			remove_from_group("wheat")
+			
